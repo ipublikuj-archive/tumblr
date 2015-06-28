@@ -46,9 +46,9 @@ class ExtensionTest extends Tester\TestCase
 	{
 		$dic = $this->createContainer();
 
-		Assert::true($dic->getService('Tumblr.client') instanceof IPub\Tumblr\Client);
-		Assert::true($dic->getService('Tumblr.config') instanceof IPub\Tumblr\Configuration);
-		Assert::true($dic->getService('Tumblr.session') instanceof IPub\Tumblr\SessionStorage);
+		Assert::true($dic->getService('tumblr.client') instanceof IPub\Tumblr\Client);
+		Assert::true($dic->getService('tumblr.config') instanceof IPub\Tumblr\Configuration);
+		Assert::true($dic->getService('tumblr.session') instanceof IPub\Tumblr\SessionStorage);
 	}
 }
 
