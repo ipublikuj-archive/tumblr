@@ -41,12 +41,12 @@ class ConfigurationTest extends Tester\TestCase
 	{
 		Assert::match('http://api.tumblr.com/v2/user/info', (string) $this->config->createUrl('api', 'user/info'));
 
-		Assert::match('http://api.tumblr.com/oauth/access_token?oauth_consumer_key=123&oauth_signature_method=HMAC-SHA1', (string) $this->config->createUrl('oauth', 'access_token', array(
+		Assert::match('http://www.tumblr.com/oauth/access_token?oauth_consumer_key=123&oauth_signature_method=HMAC-SHA1', (string) $this->config->createUrl('oauth', 'access_token', array(
 			'oauth_consumer_key' => $this->config->consumerKey,
 			'oauth_signature_method' => 'HMAC-SHA1'
 		)));
 
-		Assert::match('http://api.tumblr.com/oauth/request_token?oauth_consumer_key=123&oauth_signature_method=HMAC-SHA1', (string) $this->config->createUrl('oauth', 'request_token', array(
+		Assert::match('http://www.tumblr.com/oauth/request_token?oauth_consumer_key=123&oauth_signature_method=HMAC-SHA1', (string) $this->config->createUrl('oauth', 'request_token', array(
 			'oauth_consumer_key' => $this->config->consumerKey,
 			'oauth_signature_method' => 'HMAC-SHA1'
 		)));
