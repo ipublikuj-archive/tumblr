@@ -1,7 +1,7 @@
 # Tumblr
 
 [![Build Status](https://img.shields.io/travis/iPublikuj/tumblr.svg?style=flat-square)](https://travis-ci.org/iPublikuj/tumblr)
-[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/iPublikuj/tumblr.svg?style=flat-square)](https://scrutinizer-ci.com/g/iPublikuj/tumblr/?branch=master)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/ipub/tumblr.svg?style=flat-square)](https://scrutinizer-ci.com/g/ipub/tumblr/?branch=master)
 [![Latest Stable Version](https://img.shields.io/packagist/v/ipub/tumblr.svg?style=flat-square)](https://packagist.org/packages/ipub/tumblr)
 [![Composer Downloads](https://img.shields.io/packagist/dt/ipub/tumblr.svg?style=flat-square)](https://packagist.org/packages/ipub/tumblr)
 
