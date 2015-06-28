@@ -57,7 +57,7 @@ class ClientTest extends TestCase
 
 		$this->httpClient->fakeResponse('{"meta": {"status":200,"msg":"OK"},"response":{"user":{"following":263,"default_post_format":"html","name":"derekg"}}}', 200, ['Content-Type' => 'application/json; charset=utf-8']);
 
-		Assert::same(38895958, $client->getUser());
+		Assert::same('derekg', $client->getUser());
 		Assert::count(1, $this->httpClient->requests);
 
 		$secondRequest = $this->httpClient->requests[0];
@@ -71,16 +71,16 @@ class ClientTest extends TestCase
 	{
 		$client = $this->buildClient(array('oauth_verifier' => 'abcedf', 'oauth_token' => 'ghijklmn'));
 
-		$this->httpClient->fakeResponse('oauth_token=72157626318069415-087bfc7b5816092c&oauth_token_secret=a202d1f853ec69de&user_id=38895958&screen_name=john.doe', 200, ['Content-Type' => 'text/plain; charset=utf-8']);
+		$this->httpClient->fakeResponse('oauth_token=72157626318069415-087bfc7b5816092c&oauth_token_secret=a202d1f853ec69de', 200, ['Content-Type' => 'text/plain; charset=utf-8']);
 		$this->httpClient->fakeResponse('{"meta": {"status":200,"msg":"OK"},"response":{"user":{"following":263,"default_post_format":"html","name":"derekg"}}}', 200, ['Content-Type' => 'application/json; charset=utf-8']);
 
-		Assert::same(38895958, $client->getUser());
+		Assert::same('derekg', $client->getUser());
 		Assert::count(2, $this->httpClient->requests);
 
 		$firstRequest = $this->httpClient->requests[0];
 
 		Assert::same('POST', $firstRequest->getMethod());
-		Assert::match('http://api.tumblr.com/oauth/access_token', $firstRequest->getUrl()->getHostUrl() . $firstRequest->getUrl()->getPath());
+		Assert::match('http://www.tumblr.com/oauth/access_token', $firstRequest->getUrl()->getHostUrl() . $firstRequest->getUrl()->getPath());
 		Assert::same(['Accept' => 'application/json'], $firstRequest->getHeaders());
 
 		$secondRequest = $this->httpClient->requests[1];
