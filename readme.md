@@ -26,7 +26,7 @@ extensions:
 
 ## Documentation
 
-Learn how to authenticate the user using Tumblr's oauth or call Tumblr's api in [documentation](https://github.com/iPublikuj/tumblr/blob/master/docs/en/index.md).
+Learn how to authenticate the user using Tumblr's oauth or call Tumblr's api in [documentation](https://bitbucket.org/ipub/tumblr/blob/master/docs/en/index.md).
 
 ***
-Homepage [http://www.ipublikuj.eu](http://www.ipublikuj.eu) and repository [http://github.com/iPublikuj/tumblr](http://github.com/iPublikuj/tumblr).
+Homepage [http://www.ipublikuj.eu](http://www.ipublikuj.eu) and repository [http://bitbucket.org/ipub/tumblr](http://bitbucket.org/ipub/tumblr).
