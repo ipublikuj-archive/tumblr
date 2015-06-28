@@ -198,13 +198,11 @@ class Client extends ApiCall
 	}
 
 	/**
-	 * @param int|string $profileId
-	 *
 	 * @return Profile
 	 */
-	public function getProfile($profileId = NULL)
+	public function getProfile()
 	{
-		return new Profile($this, $profileId);
+		return new Profile($this);
 	}
 
 	/**

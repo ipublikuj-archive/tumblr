@@ -68,7 +68,7 @@ class Profile extends Nette\Object
 		if ($this->details === NULL) {
 			try {
 
-				if ($user = $this->tumblr->getUser()) {
+				if ($this->tumblr->getUser()) {
 					if (($result = $this->tumblr->get('user/info')) && ($result instanceof Utils\ArrayHash)) {
 						$this->details = $result->user;
 					}
