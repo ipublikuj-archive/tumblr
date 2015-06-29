@@ -121,7 +121,7 @@ class LoginDialog extends Application\UI\Control
 			$this->presenter->redirectUrl($this->getUrl());
 
 		} else {
-			throw new OAuth\Exceptions\RequestFailedException('User could not be authenticated.', 'tumblr');
+			throw new OAuth\Exceptions\RequestFailedException(sprintf('User could not be authenticated to "%s".', 'tumblr'));
 		}
 	}
 
